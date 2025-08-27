@@ -37,22 +37,23 @@ Example scene with multiple spheres, lighting, and shadows (with anti-aliasing e
 
 ### Build
 # Clone the repo
-git clone https://github.com/yourusername/tiny-raytracer.git
-cd tiny-raytracer
+git clone https://github.com/yourusername/3D-Renderer.git
+cd 3D-Renderer
 
 # Build all versions
 make
 
 **This creates three executables:**  
-MS1_assg → Vector Math + World Setup  
+
+**MS1_assg** → Vector Math + World Setup  
 Demonstrates vector operations (add, subtract, dot, normalize, etc.) and dynamic world management.  
 Outputs plain text results, not an image.  
 
-MS2_assg → Grayscale Ray Tracing  
+**MS2_assg** → Grayscale Ray Tracing  
 Implements the full ray tracing pipeline (camera, viewport, rays, ray–sphere intersection, lighting, shadows).  
 Outputs a grayscale PPM image where spheres are white and the background is black.  
 
-FS_assg → Final Submission (Full Color + Anti-Aliasing)  
+**FS_assg** → Final Submission (Full Color + Anti-Aliasing)  
 Adds color parsing from HEX → RGB, sorts colors, assigns background/sphere colors properly, and smooths edges with 3×3 anti-aliasing.  
 Outputs a full-color PPM image.  
 
@@ -95,7 +96,7 @@ Anti-aliasing: 9 rays per pixel, averaged
 Organized into src/ with headers for clarity  
 Build targets controlled with preprocessor macros:  
 
-// Compile with one of:  
+// **Compile with one of:**  
 //   -DMS1 → vector math + world setup (no rendering)  
 //   -DMS2 → grayscale ray tracing  
 //   -DFS  → full-color ray tracing with anti-aliasing  
