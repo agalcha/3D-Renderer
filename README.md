@@ -26,11 +26,6 @@ Example scene with multiple spheres, lighting, and shadows (with anti-aliasing e
 <img width="1274" height="952" alt="image" src="https://github.com/user-attachments/assets/67011e32-e5f4-4546-8cfb-84031c82cd93" />  
 <img width="1270" height="950" alt="image" src="https://github.com/user-attachments/assets/40a0080e-72d1-48be-a150-0fdf6011d755" />  
 
-
-<p align="center">
-  <img src="examples/output.png" width="500">
-</p>
-
 ---
 
 ## 🚀 Getting Started
@@ -57,22 +52,26 @@ Outputs a grayscale PPM image where spheres are white and the background is blac
 Adds color parsing from HEX → RGB, sorts colors, assigns background/sphere colors properly, and smooths edges with 3×3 anti-aliasing.  
 Outputs a full-color PPM image.  
 
-##Run
+## Run  
 ./FS_assg examples/input.txt output.ppm  
 You can view the .ppm directly in many apps, or convert to PNG:  
 convert output.ppm output.png   # (ImageMagick)  
 
+---
+
 ## **📂 Input Format**  
 Input files define the scene in plain text:  
-<image width> <image height>  
-<viewport height>  
-<focal length>  
-<light position x y z> <light brightness>  
-<num colors>  
-<hex color 1> <hex color 2> ...  
-<background color index>  
-<num spheres>  
-<sphere x y z radius color_index>  
+image width image height  
+viewport height  
+focal length  
+light position x y z light brightness  
+num colors  
+hex color 1 hex color 2 ...  
+background color index  
+num spheres  
+sphere x y z radius color_index  
+
+---
 
 ...
 ## **⚡ Example Input**  
@@ -88,6 +87,8 @@ Input files define the scene in plain text:
 -2.0 0.0 -5.0 2.0 3  
 0.0 -102.0 -5.0 100.0 1  
 
+---
+
 ## **🛠️ Implementation Details**  
 Written in C99  
 Math: sqrt, dot products, vector normalization  
@@ -96,7 +97,9 @@ Anti-aliasing: 9 rays per pixel, averaged
 Organized into src/ with headers for clarity  
 Build targets controlled with preprocessor macros:  
 
-// **Compile with one of:**  
-//   -DMS1 → vector math + world setup (no rendering)  
-//   -DMS2 → grayscale ray tracing  
-//   -DFS  → full-color ray tracing with anti-aliasing  
+**Compile with one of:**  
+   -DMS1 → vector math + world setup (no rendering)  
+   -DMS2 → grayscale ray tracing  
+   -DFS  → full-color ray tracing with anti-aliasing  
+
+---
