@@ -30,9 +30,8 @@ Example scene with multiple spheres, lighting, and shadows (with anti-aliasing e
 
 ## 🚀 Getting Started
 
-### Build
 # Clone the repo
-git clone https://github.com/yourusername/3D-Renderer.git
+git clone https://github.com/yourusername/3D-Renderer.git  
 cd 3D-Renderer
 
 # Build all versions
@@ -73,7 +72,6 @@ sphere x y z radius color_index
 
 ---
 
-...
 ## **⚡ Example Input**  
 640 480  
 2.0  
@@ -98,8 +96,8 @@ Organized into src/ with headers for clarity
 Build targets controlled with preprocessor macros:  
 
 **Compile with one of:**  
-   -DMS1 → vector math + world setup (no rendering)  
-   -DMS2 → grayscale ray tracing  
-   -DFS  → full-color ray tracing with anti-aliasing  
+-   -DMS1 → vector math + world setup (no rendering)  
+-   -DMS2 → grayscale ray tracing  
+-   -DFS  → full-color ray tracing with anti-aliasing  
 
 ---
